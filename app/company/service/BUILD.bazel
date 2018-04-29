@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = ["service.go"],
+    importpath = "github.com/deepakr199/go/app/company/service",
+    visibility = ["//visibility:public"],
+    deps = ["@go_app//common/util/company:go_default_library"],
+)
