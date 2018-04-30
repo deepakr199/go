@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"fmt"
 	"github.com/deepakr199/go/app/company/service"
+	"github.com/golang/glog"
 	"strconv"
 )
 
@@ -12,6 +13,7 @@ func main() {
 	http.HandleFunc("/app/company/get", getCompanyHandler)
 	http.HandleFunc("/app/company/set", setCompanyHandler)
 
+	glog.Info("Running Employee App at 8003");
 	http.ListenAndServe(":8002", nil)
 }
 

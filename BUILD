@@ -1,14 +1,11 @@
 #gazelle:exclude basic
 #gazelle:exclude common
-#gazelle:exclude pkg4
-#gazelle:exclude pkg5
 
-load("@io_bazel_rules_go//go:def.bzl", "gazelle", "go_binary", "go_library", "go_prefix")
-
-go_prefix("github.com/deepakr199/go")
+load("@io_bazel_rules_go//go:def.bzl", "gazelle", "go_binary", "go_library")
 
 gazelle(
     name = "gazelle",
+    prefix = "github.com/deepakr199/go",
 )
 
 go_library(

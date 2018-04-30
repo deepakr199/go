@@ -26,8 +26,8 @@
 
 
 [[constraint]]
-  name = "github.com/deepakr199/go"
-  version = "1.0.0"
+  branch = "master"
+  name = "github.com/golang/glog"
 
 [prune]
   go-tests = true
