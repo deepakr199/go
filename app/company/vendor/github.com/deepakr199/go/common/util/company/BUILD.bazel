@@ -1,0 +1,10 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = ["company.go"],
+    importmap = "app/company/vendor/github.com/deepakr199/go/common/util/company",
+    importpath = "github.com/deepakr199/go/common/util/company",
+    visibility = ["//visibility:public"],
+    deps = ["//app/company/vendor/github.com/deepakr199/go/common/util:go_default_library"],
+)
