@@ -2,14 +2,14 @@
 
 
 [[projects]]
+  branch = "master"
   name = "github.com/deepakr199/go"
   packages = [
     "common/util",
     "common/util/company",
     "common/util/employee"
   ]
-  revision = "b71ef0aed56b76efd5650fbc30ca64d4fb14a8b8"
-  version = "v1.1"
+  revision = "9b2ec924d4977ac53a81270ac6921f178a6c1925"
 
 [[projects]]
   branch = "master"
@@ -20,6 +20,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9c2d6a97e1bd9e87d521c7b93c470b98e6b192789793ac71f542b5faad41e855"
+  inputs-digest = "f069a750ccca5a053d6924e09ed96538ba2a44bcdcc64a5d321f6e8f77413706"
   solver-name = "gps-cdcl"
   solver-version = 1

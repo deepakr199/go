@@ -6,5 +6,8 @@ go_library(
     importmap = "app/vendor/github.com/deepakr199/go/common/util/employee",
     importpath = "github.com/deepakr199/go/common/util/employee",
     visibility = ["//visibility:public"],
-    deps = ["//app/vendor/github.com/deepakr199/go/common/util:go_default_library"],
+    deps = [
+        "//app/vendor/github.com/deepakr199/go/common/util:go_default_library",
+        "//app/vendor/github.com/golang/glog:go_default_library",
+    ],
 )
