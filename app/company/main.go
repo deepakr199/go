@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/deepakr199/go/app/company/service"
 	"strconv"
+	"github.com/golang/glog"
 )
 
 func main() {
@@ -12,6 +13,7 @@ func main() {
 	http.HandleFunc("/app/company/get", getCompanyHandler)
 	http.HandleFunc("/app/company/set", setCompanyHandler)
 
+	glog.Info("Company App running at 8002");
 	http.ListenAndServe(":8002", nil)
 }
 
