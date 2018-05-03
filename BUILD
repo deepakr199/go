@@ -1,6 +1,3 @@
-#gazelle:exclude basic
-#gazelle:exclude common
-
 load("@io_bazel_rules_go//go:def.bzl", "gazelle", "go_binary", "go_library")
 
 gazelle(
