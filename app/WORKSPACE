@@ -10,7 +10,7 @@ http_archive(
     sha256 = "92a3c59734dad2ef85dc731dbcb2bc23c4568cded79d4b87ebccd787eb89e8d0",
 )
 
-load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains", "go_repository")
+load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
 
 go_rules_dependencies()
 go_register_toolchains()
@@ -21,3 +21,4 @@ local_repository(
     name = "com_github_deepakr199_go",
     path = "/Users/deepak.ramakrishna/Work/GitHub/bazel-build/go",
 )
+

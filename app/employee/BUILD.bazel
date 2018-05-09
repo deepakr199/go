@@ -5,7 +5,10 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/deepakr199/go/app/employee",
     visibility = ["//visibility:private"],
-    deps = ["//employee/service:go_default_library"],
+    deps = [
+        "//employee/service:go_default_library",
+        "@com_github_golang_glog//:go_default_library",
+    ],
 )
 
 go_binary(
