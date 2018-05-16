@@ -1,0 +1,20 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "util/company/company.go",
+    ],
+    importpath = "github.com/deepakr199/go/common/util/company",
+    deps = [":common_util"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "common_util",
+    srcs = [
+        "util/db.go",
+    ],
+    importpath = "github.com/deepakr199/go/common/util",
+    visibility = ["//visibility:public"],
+)

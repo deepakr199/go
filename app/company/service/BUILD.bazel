@@ -5,5 +5,5 @@ go_library(
     srcs = ["service.go"],
     importpath = "github.com/deepakr199/go/app/company/service",
     visibility = ["//visibility:public"],
-    deps = ["@common//:common_util_company"],
+    deps = ["//common:go_default_library"],
 )
