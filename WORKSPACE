@@ -15,8 +15,29 @@ go_register_toolchains()
 load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
 gazelle_dependencies()
 
-go_repository(
-    name = "go_app",
-    importpath = "github.com/deepakr199/go",
-    commit = "bf53d55d3429648276412838f5f19bd8fa3cc698",
+new_local_repository(
+    name = "common",
+    path = "/Users/deepak.ramakrishna/Work/GitHub/bazel-build/src/github.com/deepakr199/go/common",
+    build_file_content = """
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "common_util_company",
+    srcs = glob([
+        "util/company/company.go",
+    ]),
+    importpath = "github.com/deepakr199/go/common/util/company",
+    deps = [":common_util"],
+    visibility = ["//visibility:public"],
+)
+
+go_library(
+    name = "common_util",
+    srcs = glob([
+        "util/db.go",
+    ]),
+    importpath = "github.com/deepakr199/go/common/util",
+    visibility = ["//visibility:public"],
+)
+""",
 )
